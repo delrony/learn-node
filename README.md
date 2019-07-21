@@ -107,4 +107,25 @@ In the container
 /var/learner$ yarn install
 ```
 
-And I am now ready to resume learning.
+And I am now ready to resume learning. I add another react module - react-dom
+
+```bash
+/var/learner$ yarn add react-dom
+```
+
+Add the changes to local git repository.
+
+```bash
+/var/learner$ git add .
+/var/learner$ git commit -m "Add react-dom"
+/var/learner$ git push
+```
+
+Now I am finish with my learning and push the change to the docker hub.
+
+In host computer,
+```bash
+~/learning/react$ docker stop react_learn_1
+~/learning/react$ docker commit react_learn_1 ronyhuda/learn-react:latest
+~/learning/react$ docker push ronyhuda/learn-react:latest
+```
