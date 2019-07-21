@@ -1,0 +1,11 @@
+version: "3"
+services:
+    learn:
+        image: ronyhuda/learn-node:latest
+        volumes:
+            - $PWD:/var/learner
+        ports:
+            - 8080:8080
+        command: ["/usr/bin/tail", "-f", "/dev/null"]
+        user: learner
+        working_dir: /var/learner
